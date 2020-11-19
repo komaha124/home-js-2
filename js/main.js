@@ -1,17 +1,16 @@
 var arr = [];
-
-function addArr() { 
+ 
+function instArr() { 
     let myNode = document.getElementById("stroka1");
     while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
     }
-}
-
-function instArr() { 
     for(let i = 0; i < arr.length; i++) {
         let checkName = document.getElementById("stroka1");
         checkName.insertAdjacentHTML('beforeend', `<p>${arr[i].name} - ${arr[i].quantity} - ${arr[i].price} = ${arr[i].quantity * arr[i].price}</p>`);
     }
+
+  
 }
 function summ() { 
     let mySum = 0;
@@ -53,16 +52,27 @@ function addPlus() {
         if(nameProduct == 0) {
         return; 
     }
-
+    
     let quantProduct = Number(document.getElementById("Quantity").value);
-        if(quantProduct == 0) { 
-        return;
+  
+       if(quantProduct <= 0) 
+       alert("Количество не может быть меньше 0!")  ; 
+        
+       
+       if(quantProduct <= 0) {
+        return; 
+       }
+   
+    let ProductPrice = document.getElementById("Price").value;
+    if(ProductPrice <= 0) 
+    alert("Цена не может быть меньше 0!")  ; 
+     
+    
+    if(ProductPrice <= 0) {
+     return; 
     }
 
-    let ProductPrice = document.getElementById("Price").value;
-        if(ProductPrice == 0) { 
-        return;
-    }
+    
     
     let addPlusBlock = {
         name: nameProduct,
@@ -72,7 +82,6 @@ function addPlus() {
  
 
 
-    arr.push(addPlusBlock);
-    addArr();
+    arr.push(addPlusBlock); 
     instArr();
 }
