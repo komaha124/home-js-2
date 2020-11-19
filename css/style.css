@@ -1,0 +1,36 @@
+body{
+    background-color: #d3dcda;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    width: 1500px;
+}
+.butt-1{
+    background-color: #54a02c;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+}
+.butt-2{
+    background-color: #77521b;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+}
+.butt-3{
+    background-color: #23c1a4;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+}
+.check{
+    width: 20%;
+    border: 1px solid;
+}
+.tit{
+    text-align: center;
+}
+#stroka1{
+    text-align: center;
+}

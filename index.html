@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="flex">
+        <div>
+            <form action="">
+            <p>Название товара</p>
+            <input type="text" placeholder="Введите название" id="Product">
+            <p>Количество</p>
+            <input type="number" placeholder="Введите количество" id="Quantity">
+            <p>Цена</p>
+            <input type="text" placeholder="Введите цену" id="Price">
+            <p>  <button type="button" onclick="addPlus()" class="butt-1">Добавить в чек</button></p>
+            <button type="reset"  class="butt-2">Очистить</button>
+            </form>
+        </div>
+        <div class="check">
+            <div class="tit"> <h2>Чек</h2></div>
+           
+            <div id="stroka1"></div>
+         </div>
+         <div>
+            <p>  <button type="button" onclick="summ()" class="butt-3">Общая сума покупок</button></p>
+            <div id="stroka2"></div>
+        </div>
+        <div>
+            <p>  <button type="button" onclick="Average()" class="butt-3">Cредняя стоимость одного товара</button></p>
+            <div id="stroka3"></div>
+        </div>
+        <div>
+            <p>  <button type="button" onclick="findExpensive()" class="butt-3">Самый дорогой товар</button></p>
+            <div id="stroka4"></div>
+        </div>
+    </div>
+
+ <script src="js/main.js"></script>
+</body>
+</html>
