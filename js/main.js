@@ -22,12 +22,16 @@ function summ() {
 }
 
 function Average() { 
-    let AverageSum = 0;
+    let allQuantity = 0;
+    let allPrice = 0;
+    let average = 0;
     for(let i = 0; i < arr.length; i++) {
-        AverageSum = (arr[i].quantity * arr[i].price) / arr[i].quantity;
+        allQuantity = Number(allQuantity) + Number(arr[i].quantity);
+        allPrice = Number(allPrice) + Number(arr[i].price);
     }
+    average = allPrice / allQuantity;
     let checkName = document.getElementById("stroka3");
-    document.getElementById("stroka3").innerHTML = ('beforeend', `<p> Среднее: ${AverageSum} грн</p>`);
+    document.getElementById("stroka3").innerHTML = ('beforeend', `<p> Среднее: ${average.toFixed(2)} грн</p>`);
 }
 
 
