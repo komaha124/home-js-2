@@ -1,5 +1,4 @@
 var arr = [];
-
  
 function instArr() { 
     let myNode = document.getElementById("stroka1");
@@ -17,11 +16,9 @@ function summ() {
     let mySum = 0;
     for(let i = 0; i < arr.length; i++) {
         mySum = mySum + arr[i].quantity * arr[i].price;
-        
     }
     let checkName = document.getElementById("stroka2");
-    document.getElementById("stroka2").innerHTML = ('beforeend', `<p> Всего: ${mySum} грн</p>`)
-    
+    document.getElementById("stroka2").innerHTML = ('beforeend', `<p> Всего: ${mySum} грн</p>`);
 }
 
 function Average() { 
@@ -43,7 +40,7 @@ function findExpensive() {
             indexAr = i;
         }
     }
-    document.getElementById("stroka4").innerHTML = ('beforeend', `<p> Дорогой: ${arr[indexAr].name} - ${arr[indexAr].quantity * arr[indexAr].price}</p>`);
+    document.getElementById("stroka4").innerHTML = ('beforeend', `<p> Дорогой: ${arr[indexAr].name} - ${arr[indexAr].quantity} - ${arr[indexAr].price} = ${arr[indexAr].quantity * arr[indexAr].price}</p>`);
   
 }
 
@@ -57,17 +54,18 @@ function addPlus() {
     }
     
     let quantProduct = Number(document.getElementById("Quantity").value);
-  
-       if(quantProduct <= 0) 
-       alert("Количество не может быть меньше 0!");
-       if(quantProduct == 0)
-       {
-        return; 
-       }
+
+    if(quantProduct <= 0) 
+    alert("Количество не может быть меньше 0!");
+    if(quantProduct <= 0)
+    {
+     return; 
+    }
+
    
     let ProductPrice = document.getElementById("Price").value;
     if(ProductPrice <= 0) 
-    alert("Цена не может быть меньше 0!")  ; 
+    alert("Цена не может быть меньше 0!") ; 
      
     
     if(ProductPrice <= 0) {
